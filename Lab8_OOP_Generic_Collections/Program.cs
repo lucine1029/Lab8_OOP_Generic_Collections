@@ -29,33 +29,23 @@ namespace Lab8_OOP_Generic_Collections
                 emp.Display();
                 Console.WriteLine($"Item left in the Stack = {EmployeeStack.Count}");
             }
-            //Retrive using pop method
+            //Retrive using pop method //try to use while loop again here
             Console.WriteLine("-------------------------------");
             Console.WriteLine("Retrive Using Pop Method");
-            Employee emp5 = EmployeeStack.Pop();
-            emp5.Display();
-            Console.WriteLine($"Item left in the Stack = {EmployeeStack.Count()}");
-            Employee emp4 = EmployeeStack.Pop();
-            emp4.Display();
-            Console.WriteLine($"Item left in the Stack = {EmployeeStack.Count()}");
-            Employee emp3 = EmployeeStack.Pop();
-            emp3.Display();
-            Console.WriteLine($"Item left in the Stack = {EmployeeStack.Count()}");
-            Employee emp2 = EmployeeStack.Pop();
-            emp2.Display();
-            Console.WriteLine($"Item left in the Stack = {EmployeeStack.Count()}");
-            Employee emp1 = EmployeeStack.Pop();
-            emp1.Display();
-            Console.WriteLine($"Item left in the Stack = {EmployeeStack.Count()}");
+            while ( EmployeeStack.Count > 0 )
+            {
+                EmployeeStack.Pop().Display();
+                Console.WriteLine($"Item left in the Stack = {EmployeeStack.Count()}");
+            }
 
             Console.WriteLine("-------------------------------");
-            //Add all objects again
-            EmployeeStack.Push(emp1);
-            EmployeeStack.Push(emp2);
-            EmployeeStack.Push(emp3);
-            EmployeeStack.Push(emp4);
-            EmployeeStack.Push(emp5);
-            //Retrive using peek method
+            // Add all objects again
+            EmployeeStack.Push(employee1);
+            EmployeeStack.Push(employee2);
+            EmployeeStack.Push(employee3);
+            EmployeeStack.Push(employee4);
+            EmployeeStack.Push(employee5);
+            // Retrive using peek method
             Console.WriteLine("Retrive Using Peek Method");
             Employee empOne = EmployeeStack.Peek();
             empOne.Display();
@@ -64,7 +54,7 @@ namespace Lab8_OOP_Generic_Collections
             empTwo.Display();
             Console.WriteLine($"Item left in the Stack = {EmployeeStack.Count()}");
             Console.WriteLine("-------------------------------");
-            if (EmployeeStack.Contains(emp3))
+            if (EmployeeStack.Contains(employee3))
             {
                 Console.WriteLine("Emp3 is in stack");
             }
@@ -76,7 +66,7 @@ namespace Lab8_OOP_Generic_Collections
             // Del 2 - List
             Console.WriteLine("-------------------------------");
             Console.WriteLine("Del 2 - List");
-            var employeeList = new List<Employee>() {};
+            var employeeList = new List<Employee>() { };
             employeeList.Add(employee1);
             employeeList.Add(employee2);
             employeeList.Add(employee3);
